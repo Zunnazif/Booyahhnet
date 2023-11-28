@@ -14,9 +14,9 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/login' element={<FormLogin/>}/>
-        <Route path='/signup' element={<FormRegister/>}/>
-        <Route path='/payment' element={
+        <Route path='login' element={<FormLogin/>}/>
+        <Route path='signup' element={<FormRegister/>}/>
+        <Route path='payment' element={
           <ProtectRoute>
             <Payment/>
           </ProtectRoute>
