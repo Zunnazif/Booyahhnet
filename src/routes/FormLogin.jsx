@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { login } from "../services/auth.service";
+import Modal from "../component/Modal";
 // import Modal from "../component/Modal";
 
 
@@ -83,9 +84,7 @@ export default function FormLogin() {
                     className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 placeholder:text-sm focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                   <div className="text-sm">
-                    <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                      Forgot password?
-                    </a>
+                    <Modal forgot="Forgot password?" text="Dah tua ko lupaa..  inget lagi dongg cuakss"/>
                   </div>
                 </div>
               </div>
