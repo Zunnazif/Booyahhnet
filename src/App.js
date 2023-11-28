@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import FormLogin from './routes/FormLogin';
 import FormRegister from './routes/FormRegister';
 import Navbar from './component/Navbar';
