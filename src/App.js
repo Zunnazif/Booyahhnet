@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Link } from 'react-router-dom'
+import FormLogin from './routes/FormLogin';
+import FormRegister from './routes/FormRegister';
+import Navbar from './component/Navbar';
+import Payment from './routes/Payment';
+import NotFound from './routes/NotFound';
+import Home from './routes/Home';
+import ProtectRoute from './routes/ProtectRoute';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<FormLogin/>}/>
+        <Route path='/signup' element={<FormRegister/>}/>
+        <Route path='/payment' element={
+          <ProtectRoute>
+            <Payment/>
+          </ProtectRoute>
+        }/>
+        <Route path='*' element={<NotFound/>}/>
+      </Routes>
+    </>
+  )
 }
 
 export default App;
